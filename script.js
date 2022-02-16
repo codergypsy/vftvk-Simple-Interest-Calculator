@@ -10,8 +10,11 @@ function compute()
     ans = (p*rate*noy)/100;
     y = new Date().getFullYear();
     ey = y + parseInt(noy);
+    if (p > 0){
     document.getElementById("result").innerHTML="If you deposit " + p + " at an interest rate of " + rate + "%. You will receive an amount of " + ans + ", in the year " + ey;
-      
+    }else{
+        alert("Enter a valid amount");
+    }
 }
 function updateTextInput(val) {
     document.getElementById('textInput').value=val; 
